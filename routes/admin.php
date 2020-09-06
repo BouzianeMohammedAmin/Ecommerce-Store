@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,7 @@ Route::group(
             Route::get('/', 'DashboardController@index')->name('admin.dashboard');
             Route::group(['prefix' => 'setting'], function () {
                 Route::get('shipping-methods/{type}', 'SettingsController@editShippingMethod')->name('edit.shippings.methods');
-                Route::put('shipping-methods/{id}', 'SettingsController@updateShippingMethod')->name('update.shippings.methods');
+                Route::put('/shipping-methods/{id}', 'SettingsController@updateShippingMethod')->name('update.shippings.methods');
             });
         });
 

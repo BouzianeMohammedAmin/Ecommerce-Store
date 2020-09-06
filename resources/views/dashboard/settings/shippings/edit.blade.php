@@ -41,11 +41,11 @@
                             <div class="card-content collapse show">
                                 <div class="card-body">
                                     <form class="form" action="{{route('update.shippings.methods',$shippingMethod -> id)}}"
-                                          method="PUT"
+                                          method="post"
                                           enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT'){{-- for put Methode  --}}
-                                        <input type="hidden" name="id" value="{{$shippingMethod -> id}}">
+                                       <input type="hidden" name="id" value="{{$shippingMethod -> id}}">
 
                                         <div class="form-body">
 
